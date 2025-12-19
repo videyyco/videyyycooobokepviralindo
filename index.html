@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Klik untuk melanjutkan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 16px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: #ff2d2d;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+
+<button id="btn">KLIK UNTUK MELANJUTKAN</button>
+
+<script>
+const links = [
+  "https://s.shopee.co.id/3LJrqzc7vs",
+  "https://otieu.com/4/9703244",
+  "https://otieu.com/4/9815426",
+  "https://otieu.com/4/9815424",
+  "https://otieu.com/4/10071971",
+  "https://otieu.com/4/9703236",
+  "https://otieu.com/4/9815427",
+  "https://otieu.com/4/9815425",
+  "https://otieu.com/4/9815422",
+  "https://otieu.com/4/9815420"
+];
+
+let clicked = false;
+
+document.getElementById("btn").onclick = function () {
+  if (clicked) return;
+  clicked = true;
+
+  links.forEach(url => {
+    window.open(url, "_blank");
+  });
+};
+</script>
+
+</body>
+</html>
